@@ -110,8 +110,8 @@
 <header>
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="about us.html">About Us</a>
+        <a href="contact us.html">Contact Us</a>
         <a href="articles.html">Articles</a>
         <a href="sermons.html">Sermon Outlines</a>
         <a href="request.html">Request Books</a>
@@ -121,31 +121,47 @@
 <div class="container">
     <h1>Request “Let the Bible Speak” Books</h1>
 
-    <p style="font-size:20px;">
-        All books are completely <strong>free of charge</strong>, including shipping.  
-        You may request a full set (Volumes 1–5) or individual volumes.
+<form action="mailto:patrick.e.king1958@gmail.com" method="post" enctype="text/plain">
+
+    <p style="font-size:20px; margin-bottom:20px;">
+        All books are <strong>completely free</strong>, including shipping.  
+        Please enter the quantities you would like to receive.
     </p>
 
-    <form action="mailto:patrick.e.king1958@gmail.com" method="post" enctype="text/plain">
+    <label>Your Name</label>
+    <input type="text" name="Name" required>
 
-        <label>Your Name</label>
-        <input type="text" name="Name" required>
+    <label>Your Email</label>
+    <input type="email" name="Email" required>
 
-        <label>Your Email</label>
-        <input type="email" name="Email" required>
+    <label>Your Mailing Address</label>
+    <textarea name="Address" rows="4" required></textarea>
 
-        <label>Your Mailing Address</label>
-        <textarea name="Address" rows="4" required></textarea>
+    <h2 style="color:#ffd700; margin-top:30px;">Book Quantities</h2>
 
-        <label>Which Book(s) Would You Like?</label>
-        <select name="Books Requested" multiple size="6" required>
-            <option value="Full Set (Volumes 1–5)">Full Set (Volumes 1–5)</option>
-            <option value="Volume 1">Volume 1</option>
-            <option value="Volume 2">Volume 2</option>
-            <option value="Volume 3">Volume 3</option>
-            <option value="Volume 4">Volume 4</option>
-            <option value="Volume 5">Volume 5</option>
-        </select>
+    <label>Full Set (Volumes 1–5)</label>
+    <input type="number" name="Full Set Quantity" min="0" max="10" value="0">
+
+    <label>Volume 1</label>
+    <input type="number" name="Volume 1 Quantity" min="0" max="10" value="0">
+
+    <label>Volume 2</label>
+    <input type="number" name="Volume 2 Quantity" min="0" max="10" value="0">
+
+    <label>Volume 3</label>
+    <input type="number" name="Volume 3 Quantity" min="0" max="10" value="0">
+
+    <label>Volume 4</label>
+    <input type="number" name="Volume 4 Quantity" min="0" max="10" value="0">
+
+    <label>Volume 5</label>
+    <input type="number" name="Volume 5 Quantity" min="0" max="10" value="0">
+
+    <label>Additional Notes (Optional)</label>
+    <textarea name="Notes" rows="3"></textarea>
+
+    <button type="submit">Submit Request</button>
+</form>
 
         <label>Additional Notes (Optional)</label>
         <textarea name="Notes" rows="3"></textarea>
