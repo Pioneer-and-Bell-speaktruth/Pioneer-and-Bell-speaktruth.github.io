@@ -28,7 +28,6 @@
             z-index: -1;
         }
 
-        /* HEADER */
         header {
             background: rgba(0, 0, 0, 0.6);
             padding: 20px;
@@ -48,7 +47,6 @@
             text-shadow: 0 0 10px #ffd700;
         }
 
-        /* MAIN CONTENT */
         .container {
             max-width: 900px;
             margin: 40px auto;
@@ -64,13 +62,22 @@
             text-shadow: 0 0 10px #b8860b;
         }
 
+        .preacher-section {
+            margin-bottom: 40px;
+        }
+
+        .preacher-section h2 {
+            border-bottom: 1px solid #b8860b;
+            padding-bottom: 5px;
+        }
+
         ul {
             list-style: none;
             padding-left: 0;
         }
 
         ul li {
-            margin: 12px 0;
+            margin: 10px 0;
             font-size: 20px;
         }
 
@@ -84,7 +91,6 @@
             text-shadow: 0 0 10px #ffd700;
         }
 
-        /* FOOTER */
         footer {
             text-align: center;
             padding: 20px;
@@ -111,17 +117,29 @@
 
 <div class="container">
     <h1>Sermon Outlines</h1>
-
-    <h2>Recent Sermon Outlines</h2>
     <p style="font-size:20px;">
-        Below are links to our sermon outlines. These may be PDFs, Word documents, or HTML pages.
+        Sermons are organized by preacher. Click any title to download or view the outline.
     </p>
 
-    <ul>
-        <li><a href="#">Sermon Title 1</a></li>
-        <li><a href="#">Sermon Title 2</a></li>
-        <li><a href="#">Sermon Title 3</a></li>
-    </ul>
+    <!-- PATRICK KING -->
+    <div class="preacher-section">
+        <h2>Patrick King</h2>
+        <ul>
+            <li><a href="/static/sermons/patrick_king/sermon1.pdf">Sermon Title 1</a></li>
+            <li><a href="/static/sermons/patrick_king/sermon2.pdf">Sermon Title 2</a></li>
+            <li><a href="/static/sermons/patrick_king/sermon3.pdf">Sermon Title 3</a></li>
+        </ul>
+    </div>
+
+    <!-- OTHER PREACHERS -->
+    <div class="preacher-section">
+        <h2>Preacher Sermons by Name</h2>
+        <ul>
+            <li><a href="preacher-files/Patrick King/Sermon Outlines By Alphabet">Patrick King</a></li>
+            <li><a href="/static/sermons/other_preachers/john_doe_lesson2.pdf">John Doe – Lesson 2</a></li>
+        </ul>
+    </div>
+
 </div>
 
 <footer>
