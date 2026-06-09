@@ -3,35 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sermon Outlines</title>
+    <title>Sermon Outlines – Pioneer & Bell church of Christ</title>
+
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-        header { background: #333; color: white; padding: 1rem; text-align: center; }
-        nav { background: #444; padding: 0.5rem; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .container { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        footer { text-align: center; padding: 1rem; margin-top: 2rem; background: #333; color: white; }
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: url('/static/images/login_bg.jpg') no-repeat center center/cover;
+            font-family: "Georgia", serif;
+            color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
+        }
+
+        /* HEADER */
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #b8860b;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-shadow: 0 0 10px #ffd700;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(0, 0, 0, 0.55);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #b8860b;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+        }
+
+        h1, h2 {
+            color: #ffd700;
+            text-shadow: 0 0 10px #b8860b;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin: 12px 0;
+            font-size: 20px;
+        }
+
+        ul li a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        ul li a:hover {
+            text-shadow: 0 0 10px #ffd700;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #b8860b;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffd700;
+            margin-top: auto;
+        }
     </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Sermon Outlines</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="articles.html">Articles</a>
+        <a href="sermons.html">Sermon Outlines</a>
+        <a href="request.html">Request Books</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="sermons.html">Sermons</a>
-    <a href="articles.html">Articles</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
 <div class="container">
+    <h1>Sermon Outlines</h1>
+
     <h2>Recent Sermon Outlines</h2>
-    <p>Add links to your sermon outline PDFs, Word documents, or HTML pages here.</p>
+    <p style="font-size:20px;">
+        Below are links to our sermon outlines. These may be PDFs, Word documents, or HTML pages.
+    </p>
 
     <ul>
         <li><a href="#">Sermon Title 1</a></li>
@@ -41,7 +125,7 @@
 </div>
 
 <footer>
-    <p>&copy; 2026 Pioneer & Bell church of Christ</p>
+    &copy; 2026 Pioneer & Bell church of Christ
 </footer>
 
 </body>
