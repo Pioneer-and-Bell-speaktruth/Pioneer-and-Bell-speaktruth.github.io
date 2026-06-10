@@ -4,43 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles – Pioneer & Bell church of Christ</title>
-    
+
+    <!-- Bootswatch Lumen -->
     <link rel="stylesheet" href="/speaktruth-pioneer/static/css/bootstrap.min.css">
 
+    <style>
+        body {
+            background: url('/static/images/login_bg.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+            position: relative;
+            color: #fff;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
+        }
+
+        footer {
+            color: #ddd;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="articles.html">Articles</a>
-        <a href="sermons.html">Sermon Outlines</a>
-        <a href="request.html">Request Books</a>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Pioneer & Bell</a>
 
-<div class="container">
-    <h1>Newspaper Articles</h1>
+        <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About Us</a>
+            <a class="nav-link" href="contact.html">Contact Us</a>
+            <a class="nav-link active" href="articles.html">Articles</a>
+            <a class="nav-link" href="sermons.html">Sermon Outlines</a>
+            <a class="nav-link" href="request.html">Request Books</a>
+        </div>
+    </div>
+</nav>
 
-    <h2>Published Articles</h2>
-        You can use the link below to visit the old website to see all the articles, tracts, etc. there. 
-        Path to take:
-        1) Click on the link
-        2) Hover over 'Resources'
-        3) Choose from the drop-down options that show up.
+<!-- MAIN CONTENT -->
+<div class="container mt-5 mb-5 text-center">
+
+    <h1 class="mb-4">Newspaper Articles</h1>
+
+    <h2 class="mb-3">Published Articles</h2>
+
+    <p class="lead">
+        You can use the link below to visit the archived version of our previous website.
+        There you will find all articles, tracts, sermon outlines, and more.
     </p>
 
-    <ul>
-        <li>
-            <a href="https://kingp84.github.io/speaktruth-pioneer/archives/Pioneer%20Files/thelordsway.com/pioneer/index.html"> View Archived Articles (Original Website)</a>
-        </li>
-    </ul>
+    <div class="text-start d-inline-block text-white-50 mb-4" style="max-width: 600px;">
+        <p class="mb-1"><strong>Path to take:</strong></p>
+        <ol>
+            <li>Click the link below</li>
+            <li>Hover over <em>Resources</em></li>
+            <li>Select the section you want from the dropdown</li>
+        </ol>
+    </div>
+
+    <div class="mt-4">
+        <a class="btn btn-primary btn-lg"
+           href="https://kingp84.github.io/speaktruth-pioneer/archives/Pioneer%20Files/thelordsway.com/pioneer/index.html">
+            View Archived Articles
+        </a>
+    </div>
+
 </div>
 
-<footer>
+<!-- FOOTER -->
+<footer class="text-center py-4">
     &copy; 2026 Pioneer & Bell church of Christ
 </footer>
 
