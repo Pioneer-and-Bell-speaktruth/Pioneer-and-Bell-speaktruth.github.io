@@ -4,71 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request Books – Pioneer & Bell church of Christ</title>
-    
-    <link rel="stylesheet" href="/speaktruth-pioneer/static/css/bootstrap.min.css">
 
+    <!-- Bootswatch Lumen -->
+    <link rel="stylesheet" href="/speaktruth-pioneer/static/css/bootstrap.min.css">
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="articles.html">Articles</a>
-        <a href="sermons.html">Sermons</a>
-        <a href="request.html">Request Books</a>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+  <div class="container-fluid">
 
-<div class="container">
-    <h1>Request “Let the Bible Speak” Books</h1>
+    <a class="navbar-brand fw-bold" href="index.html">Pioneer & Bell</a>
 
-<form action="mailto:patrick.e.king1958@gmail.com" method="post" enctype="text/plain">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
+        <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+        <li class="nav-item"><a class="nav-link active" href="request.html">Request Books</a></li>
+      </ul>
+
+      <!-- Search box -->
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container bg-light p-4 rounded shadow-sm">
+
+    <h1 class="text-primary text-center mb-4">Request “Let the Bible Speak” Books</h1>
+
+    <p class="lead text-center">
         All books are <strong>completely free</strong>, including shipping.  
         Please enter the quantities you would like to receive.
     </p>
 
-    <label>Your Name</label>
-    <input type="text" name="Name" required>
+    <form action="mailto:patrick.e.king1958@gmail.com" method="post" enctype="text/plain" class="mt-4">
 
-    <label>Your Email</label>
-    <input type="email" name="Email" required>
+        <!-- Name -->
+        <div class="mb-3">
+            <label class="form-label fw-bold">Your Name</label>
+            <input type="text" name="Name" class="form-control" required>
+        </div>
 
-    <label>Your Mailing Address</label>
-    <textarea name="Address" rows="4" required></textarea>
+        <!-- Email -->
+        <div class="mb-3">
+            <label class="form-label fw-bold">Your Email</label>
+            <input type="email" name="Email" class="form-control" required>
+        </div>
 
+        <!-- Address -->
+        <div class="mb-3">
+            <label class="form-label fw-bold">Your Mailing Address</label>
+            <textarea name="Address" rows="4" class="form-control" required></textarea>
+        </div>
 
-    <label>Full Set (Volumes 1–5)</label>
-    <input type="number" name="Full Set Quantity" min="0" max="10" value="0">
+        <hr class="my-4">
 
-    <label>Volume 1</label>
-    <input type="number" name="Volume 1 Quantity" min="0" max="10" value="0">
+        <h4 class="text-secondary mb-3">Book Quantities</h4>
 
-    <label>Volume 2</label>
-    <input type="number" name="Volume 2 Quantity" min="0" max="10" value="0">
+        <!-- Full Set -->
+        <div class="mb-3">
+            <label class="form-label fw-bold">Full Set (Volumes 1–5)</label>
+            <input type="number" name="Full Set Quantity" class="form-control" min="0" max="10" value="0">
+        </div>
 
-    <label>Volume 3</label>
-    <input type="number" name="Volume 3 Quantity" min="0" max="10" value="0">
+        <!-- Individual Volumes -->
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <label class="form-label fw-bold">Volume 1</label>
+                <input type="number" name="Volume 1 Quantity" class="form-control" min="0" max="10" value="0">
+            </div>
 
-    <label>Volume 4</label>
-    <input type="number" name="Volume 4 Quantity" min="0" max="10" value="0">
+            <div class="col-md-4 mb-3">
+                <label class="form-label fw-bold">Volume 2</label>
+                <input type="number" name="Volume 2 Quantity" class="form-control" min="0" max="10" value="0">
+            </div>
 
-    <label>Volume 5</label>
-    <input type="number" name="Volume 5 Quantity" min="0" max="10" value="0">
+            <div class="col-md-4 mb-3">
+                <label class="form-label fw-bold">Volume 3</label>
+                <input type="number" name="Volume 3 Quantity" class="form-control" min="0" max="10" value="0">
+            </div>
 
-    <label>Additional Notes (Optional)</label>
-    <textarea name="Notes" rows="3"></textarea>
+            <div class="col-md-4 mb-3">
+                <label class="form-label fw-bold">Volume 4</label>
+                <input type="number" name="Volume 4 Quantity" class="form-control" min="0" max="10" value="0">
+            </div>
 
-    <button type="submit">Submit Request</button>
-</form>
+            <div class="col-md-4 mb-3">
+                <label class="form-label fw-bold">Volume 5</label>
+                <input type="number" name="Volume 5 Quantity" class="form-control" min="0" max="10" value="0">
+            </div>
+        </div>
+
+        <!-- Notes -->
+        <div class="mb-4">
+            <label class="form-label fw-bold">Additional Notes (Optional)</label>
+            <textarea name="Notes" rows="3" class="form-control"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Submit Request</button>
+        </div>
+
+    </form>
 </div>
 
-<footer>
+<!-- FOOTER -->
+<footer class="text-center py-4 mt-5 bg-secondary text-dark">
     &copy; 2026 Pioneer & Bell church of Christ
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
