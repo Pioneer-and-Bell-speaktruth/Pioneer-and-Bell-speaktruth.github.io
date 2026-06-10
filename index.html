@@ -2,56 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pioneer & Bell</title>
-    
-    <link rel="stylesheet" href="/speaktruth-pioneer/static/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pioneer & Bell church of Christ</title>
 
+    <!-- Bootswatch Lumen -->
+    <link rel="stylesheet" href="/speaktruth-pioneer/static/css/bootstrap.min.css">
 </head>
+
 <body>
 
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="articles.html">Articles</a>
-        <a href="sermons.html">Sermons</a>
-        <a href="request.html">Request Books</a>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+  <div class="container-fluid">
 
-    <!-- MAIN CONTENT -->
-    <div class="content">
+    <a class="navbar-brand fw-bold" href="index.html">Pioneer & Bell</a>
 
-<!-- Themed Image Board -->
-    <img src="images/building.jpg" 
-         alt="Building"
-</div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <h1>Welcome to the Pioneer & Bell church of Christ</h1>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
+        <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+        <li class="nav-item"><a class="nav-link" href="request.html">Request Books</a></li>
+      </ul>
 
-        <p>
-            Thank you for visiting our website. We have many study articles here that we hope will help you in learning more about God's word. Click the Articles or Sermons button on the bar above or the Old Website button below. New sermons are added weekly, come back and look for them. We are currently revamping our Bible Study correspondence courses and tracts on several topics, just check frequently for a new button if you are interested. We also have Let the Bible Speak Volumes 1, 2, 3, 4, and 5 which contain our first 60 study ads. There is no charge for the books, shipping, or any study materials available on the website (see the Request Books tab above to get yours today).
-            If you are in our area, please join us for worship and Bible study classes.  
-        </p>
+      <!-- Search box -->
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
 
-        <a class="btn" href="https://www.youtube.com/@pioneer-bellchurchofChrist" target="_blank">
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container bg-light p-4 rounded shadow-sm">
+
+    <!-- Image -->
+    <div class="text-center mb-4">
+        <img src="images/building.jpg" alt="Building" class="img-fluid rounded shadow-sm" style="max-width: 600px;">
+    </div>
+
+    <h1 class="text-primary text-center mb-4">Welcome to the Pioneer & Bell church of Christ</h1>
+
+    <p class="fs-5 text-center">
+        Thank you for visiting our website. We have many study articles here that we hope will help you 
+        in learning more about God's word. Click the Articles or Sermons button on the bar above or the 
+        Old Website button below. New sermons are added weekly, so come back and look for them.
+        <br><br>
+        We are currently revamping our Bible Study correspondence courses and tracts on several topics. 
+        We also have <em>Let the Bible Speak</em> Volumes 1–5 which contain our first 60 study ads. 
+        There is no charge for the books, shipping, or any study materials available on the website.
+        <br><br>
+        If you are in our area, please join us for worship and Bible study classes.
+    </p>
+
+    <!-- Assignments Calendar Button -->
+    <div class="text-center mt-4">
+        <a class="btn btn-primary btn-lg" 
+           href="https://speaktruth.onrender.com/assignments/calendar/2026/6/" 
+           target="_blank">
+            View Assignments Calendar
+        </a>
+    </div>
+
+    <!-- YouTube Button -->
+    <div class="text-center mt-3">
+        <a class="btn btn-secondary btn-lg" 
+           href="https://www.youtube.com/@pioneer-bellchurchofChrist" 
+           target="_blank">
             Pioneer-Bell YouTube Channel
         </a>
-        <h2>
-            Worship & Bible Study Times
-        </h2>
     </div>
+
+    <!-- Worship Times -->
+    <h2 class="text-secondary text-center mt-5">Worship & Bible Study Times</h2>
+
+    <ul class="fs-5 list-unstyled text-center mt-3">
+        <li><strong>Sunday Morning Bible Study:</strong> 9:30 AM (Teacher: Earl Reed)</li>
+        <li class="mt-2"><strong>Sunday Morning Worship:</strong> 10:30 AM</li>
+        <li class="mt-2">
+            <strong>Sunday Evening Worship:</strong> 6:00 PM  
+            <br><em>(5th Sundays: approx. 1:00 PM, no 6 PM service)</em>
+        </li>
+        <li class="mt-2"><strong>Wednesday Evening Bible Study/Worship:</strong> 7:00 PM (Teacher: Earl Reed)</li>
+    </ul>
+
 </div>
 
-<!-- FOOTER WITH LOGIN BUTTONS -->
-<footer>
-    <a class="btn" href="https://speaktruth.onrender.com">Member Login</a>
-    <a class="btn" href="https://speaktruth.onrender.com/admin/">Admin Login</a>
-    <a class="btn" href="https://www.thelordsway.com/pioneer" target="_blank">
-        Old Website
-    </a>
+<!-- FOOTER -->
+<footer class="text-center py-4 mt-5 bg-secondary text-dark">
+    <a class="btn btn-light me-2" href="https://speaktruth.onrender.com">Member Login</a>
+    <a class="btn btn-light me-2" href="https://speaktruth.onrender.com/admin/">Admin Login</a>
+    <a class="btn btn-light" href="https://www.thelordsway.com/pioneer" target="_blank">Old Website</a>
+    <br><br>
+    &copy; 2026 Pioneer & Bell church of Christ
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
