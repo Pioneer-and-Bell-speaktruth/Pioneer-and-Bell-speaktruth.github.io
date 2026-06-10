@@ -4,51 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us – Pioneer & Bell church of Christ</title>
-    
-    <link rel="stylesheet" href="/speaktruth-pioneer/static/css/bootstrap.min.css">
 
+    <!-- Bootswatch Lumen -->
+    <link rel="stylesheet" href="/speaktruth-pioneer/static/css/bootstrap.min.css">
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="articles.html">Articles</a>
-        <a href="sermons.html">Sermons</a>
-        <a href="request.html">Request Books</a>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+  <div class="container-fluid">
 
-<div class="container">
-    <h1>Contact Us</h1>
+    <a class="navbar-brand fw-bold" href="index.html">Pioneer & Bell</a>
 
-    <p>If you have questions, prayer requests, or would like to arrange a Bible study with us, we would love to hear from you.</p>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <h2>Congregation Information</h2>
-    <ul>
-        <li><strong>Address:</strong> 900 N. Pioneer Elk City, OK  73644</li>
-        <li><strong>Mailing Address:</strong> P.O. Box 821 Elk City, OK 73648</li>
-        <li><strong>Phone:</strong> (580) 501-0175</li>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
+        <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+        <li class="nav-item"><a class="nav-link" href="request.html">Request Books</a></li>
+      </ul>
+
+      <!-- Search box -->
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container bg-light p-4 rounded shadow-sm">
+
+    <h1 class="text-primary mb-4 text-center">Contact Us</h1>
+
+    <p class="fs-5 text-center">
+        If you have questions, prayer requests, or would like to arrange a Bible study with us, 
+        we would love to hear from you.
+    </p>
+
+    <h3 class="text-secondary mt-4">Congregation Information</h3>
+    <ul class="fs-5">
+        <li><strong>Address:</strong> 900 N. Pioneer, Elk City, OK 73644</li>
+        <li><strong>Mailing Address:</strong> P.O. Box 821, Elk City, OK 73648</li>
+        <li><strong>Phone:</strong> (580) 501‑0175</li>
         <li><strong>Email:</strong> (Insert email address)</li>
-        <li><strong>Physical Description:</strong> Pioneer and Bell is on the west side of Elk City across from the High School. Take old Route 66 (Third) into Elk City, turn north at the stop light at Pioneer and Third (Route 66), go north about 4 blocks to Bell, our parking lot may also be entered from Pioneer a few yards north of our sign. We are located on the Northeast corner.</li>
+        <li><strong>Physical Description:</strong> 
+            Pioneer and Bell is on the west side of Elk City across from the High School. 
+            Take old Route 66 (Third) into Elk City, turn north at the stop light at Pioneer and Third, 
+            go north about 4 blocks to Bell. Our parking lot may also be entered from Pioneer a few yards 
+            north of our sign. We are located on the northeast corner.
+        </li>
     </ul>
 
-    <h2>Secretary / Men of the Congregation</h2>
-    <ul>
+    <h3 class="text-secondary mt-4">Secretary / Men of the Congregation</h3>
+    <ul class="fs-5">
         <li><strong>Secretary:</strong> Gwen Waggy</li>
-        <li><strong>Men of the Congregation:</strong> (Alphabetical Order) Steve Hickman, Joseph King, Patrick King, Luke Lewis, Earl Reed, Chris Thompson</li>
+        <li><strong>Men of the Congregation:</strong> 
+            Steve Hickman, Joseph King, Patrick King, Luke Lewis, 
+            Earl Reed, Chris Thompson
+        </li>
     </ul>
 
-    <h2>Send Us a Message</h2>
-    <p>You may also reach out through our YouTube channel or by contacting us directly during services (See Homepage for times of service).</p>
+    <h3 class="text-secondary mt-4">Send Us a Message</h3>
+    <p class="fs-5">
+        You may also reach out through our YouTube channel or by contacting us directly during services 
+        (See Homepage for times of service).
+    </p>
+
 </div>
 
-<footer>
+<!-- FOOTER -->
+<footer class="text-center py-4 mt-5 bg-secondary text-dark">
     &copy; 2026 Pioneer & Bell church of Christ
 </footer>
+
+<!-- Bootstrap JS (for navbar toggle) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
