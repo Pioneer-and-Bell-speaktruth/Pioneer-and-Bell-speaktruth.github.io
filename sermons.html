@@ -3,45 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sermon Outlines – Pioneer & Bell church of Christ</title>
-    
-    <link rel="stylesheet" href="/speaktruth-pioneer/static/css/bootstrap.min.css">
+    <title>Sermons – Pioneer & Bell church of Christ</title>
 
+    <!-- Bootswatch Lumen -->
+    <link rel="stylesheet" href="/speaktruth-pioneer/static/css/bootstrap.min.css">
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="articles.html">Articles</a>
-        <a href="sermons.html">Sermon Outlines</a>
-        <a href="request.html">Request Books</a>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+  <div class="container-fluid">
 
-<div class="container">
-    <h1>Sermon Outlines</h1>
-        Sermons are organized by preacher. Click on a preacher's name. Click any title to download or view the outline.
+    <a class="navbar-brand fw-bold" href="index.html">Pioneer & Bell</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
+        <li class="nav-item"><a class="nav-link active" href="sermons.html">Sermons</a></li>
+        <li class="nav-item"><a class="nav-link" href="request.html">Request Books</a></li>
+      </ul>
+
+      <!-- Search box -->
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search sermons">
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container bg-light p-4 rounded shadow-sm">
+
+    <h1 class="text-primary text-center mb-4">Sermons</h1>
+
+    <p class="lead text-center mb-4">
+        Below you will find sermon outlines, audio lessons, and study materials.  
+        New sermons are added weekly.
     </p>
 
-    <div class="preacher-section">
-        <h2>Preacher Sermon Outlines</h2>
-        <ul>
-            <li><a href="https://github.com/kingp84/speaktruth-pioneer/tree/main/preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet" target="_blank">Patrick King</a></li>
-            <li><a href="https://github.com/kingp84/speaktruth-pioneer/tree/main/preacher-files/Luke%20Lewis" target="_blank">Luke Lewis</a></li>
-            <li><a href="https://github.com/kingp84/speaktruth-pioneer/tree/main/preacher-files/Earl%20Reed" target="_blank">Earl Reed</a></li>
-            <li><a href="https://github.com/kingp84/speaktruth-pioneer/tree/main/preacher-files/Chris%20Thompson" target="_blank">Chris Thompson</a></li>
-        </ul>
+    <!-- SERMON LIST SECTION -->
+    <div class="list-group">
+
+        <!-- Example sermon entry -->
+        <a href="#" class="list-group-item list-group-item-action">
+            <h5 class="mb-1 fw-bold">Example Sermon Title</h5>
+            <small class="text-muted">Date: January 1, 2026</small>
+            <p class="mb-1">Short description of the sermon or Scripture reference.</p>
+        </a>
+
+        <!-- Add more sermon entries here -->
+        <!--
+        <a href="sermons/your-file.html" class="list-group-item list-group-item-action">
+            <h5 class="mb-1 fw-bold">Sermon Title</h5>
+            <small class="text-muted">Date: Month Day, Year</small>
+            <p class="mb-1">Short description or Scripture reference.</p>
+        </a>
+        -->
+
+    </div>
+
+    <!-- YOUTUBE LINK -->
+    <div class="text-center mt-4">
+        <a class="btn btn-secondary btn-lg" 
+           href="https://www.youtube.com/@pioneer-bellchurchofChrist" 
+           target="_blank">
+            Visit Our YouTube Channel
+        </a>
     </div>
 
 </div>
 
-<footer>
+<!-- FOOTER -->
+<footer class="text-center py-4 mt-5 bg-secondary text-dark">
     &copy; 2026 Pioneer & Bell church of Christ
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
