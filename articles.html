@@ -7,90 +7,78 @@
 
     <!-- Bootswatch Lumen -->
     <link rel="stylesheet" href="/speaktruth-pioneer/static/css/bootstrap.min.css">
-
-    <style>
-        body {
-            background: url('/static/images/login_bg.jpg') no-repeat center center/cover;
-            min-height: 100vh;
-            position: relative;
-            color: #fff;
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.55);
-            z-index: -1;
-        }
-
-        footer {
-            color: #ddd;
-        }
-    </style>
 </head>
 
 <body>
 
-<!-- NAVBAR (Lumen blue theme) -->
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-  <div class="container">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+  <div class="container-fluid">
+
     <a class="navbar-brand fw-bold" href="index.html">Pioneer & Bell</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         <li class="nav-item"><a class="nav-link active" href="articles.html">Articles</a></li>
-        <li class="nav-item"><a class="nav-link" href="sermons.html">Sermon Outlines</a></li>
+        <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
         <li class="nav-item"><a class="nav-link" href="request.html">Request Books</a></li>
       </ul>
+
+      <!-- Search box -->
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
+
     </div>
   </div>
 </nav>
 
 <!-- MAIN CONTENT -->
-<div class="container mt-5 mb-5 text-center">
+<div class="container">
 
-    <h1 class="mb-4">Newspaper Articles</h1>
+    <h1 class="text-primary mb-4 text-center">Newspaper Articles</h1>
+    <h3 class="text-secondary text-center mb-4">Published Articles</h3>
 
-    <h2 class="mb-3">Published Articles</h2>
-
-    <p class="lead">
-        You can use the link below to visit the archived version of our previous website.
-        There you will find all articles, tracts, sermon outlines, and more.
+    <p class="lead text-center">
+        You may use the link below to visit the archived version of our previous website, 
+        where you can find articles, tracts, sermon outlines, and more.
     </p>
 
-    <div class="text-start d-inline-block text-white-50 mb-4" style="max-width: 600px;">
-        <p class="mb-1"><strong>Path to take:</strong></p>
-        <ol>
-            <li>Click the link below</li>
-            <li>Hover over <em>Resources</em></li>
-            <li>Select the section you want from the dropdown</li>
+    <!-- Centered instructions -->
+    <div class="text-center mt-4">
+        <h4 class="fw-bold">Path to take:</h4>
+        <ol class="list-unstyled fs-5">
+            <li>1. Click the link below</li>
+            <li>2. Hover over <em>Resources</em></li>
+            <li>3. Select the section you want</li>
         </ol>
     </div>
 
-    <a class="btn btn-primary btn-lg"
-       href="https://kingp84.github.io/speaktruth-pioneer/archives/Pioneer%20Files/thelordsway.com/pioneer/index.html">
-        View Archived Articles
-    </a>
+    <!-- Centered button -->
+    <div class="text-center mt-4">
+        <a class="btn btn-primary btn-lg" 
+           href="https://www.thelordsway.com/pioneer" 
+           target="_blank">
+            VIEW ARCHIVED ARTICLES
+        </a>
+    </div>
 
 </div>
 
 <!-- FOOTER -->
-<footer class="text-center py-4">
+<footer class="text-center py-4 mt-5 bg-secondary text-dark">
     &copy; 2026 Pioneer & Bell church of Christ
 </footer>
 
-<!-- Bootstrap JS (required for navbar toggler) -->
+<!-- Bootstrap JS (for navbar toggle) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
