@@ -50,6 +50,9 @@
         Select a preacher below to view and download sermon outlines from their collection.
     </p>
 
+    <input type="text" id="sermonSearch" class="form-control mb-3" placeholder="Search all sermons...">
+    <div id="searchResults" class="list-group mt-2"></div>
+
     <!-- PREACHER LIST -->
     <div class="list-group">
 
@@ -145,6 +148,35 @@ function openLukeFolder(url) {
         window.open(url, "_blank");
     }
 }
+</script>
+
+<script>
+document.getElementById("sermonSearch").addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const resultsDiv = document.getElementById("searchResults");
+    resultsDiv.innerHTML = "";
+
+    if (query.length < 2) return; // avoid noise
+
+    // Get ALL sermon options from ALL dropdowns
+    const allOptions = document.querySelectorAll("select option");
+
+    allOptions.forEach(opt => {
+        const title = opt.textContent.trim();
+        const url = opt.value;
+
+        if (!url) return; // skip "Select..."
+
+        if (title.toLowerCase().includes(query)) {
+            const item = document.createElement("a");
+            item.href = url;
+            item.target = "_blank";
+            item.className = "list-group-item list-group-item-action";
+            item.textContent = title;
+            resultsDiv.appendChild(item);
+        }
+    });
+});
 </script>
 
 </body>
