@@ -59,11 +59,43 @@
             <small class="text-muted">Click to view sermons</small>
         </a>
 
-        <a href="https://github.com/kingp84/speaktruth-pioneer/tree/main/preacher-files/Patrick%20King" 
-           class="list-group-item list-group-item-action">
+        <!-- ⭐ UPDATED PATRICK KING SECTION ⭐ -->
+        <div class="list-group-item">
             <h5 class="mb-1 fw-bold">Patrick King</h5>
-            <small class="text-muted">Click to view sermons</small>
-        </a>
+            <small class="text-muted d-block mb-2">Select a letter to view sermons</small>
+
+            <select class="form-select" onchange="openPatrickFolder(this.value)">
+                <option value="">Select a letter...</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/A/">A</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/B/">B</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/C/">C</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/D/">D</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/E/">E</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/F/">F</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/G/">G</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/H/">H</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/I/">I</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/J/">J</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/K/">K</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/L/">L</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/M/">M</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/N/">N</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/O/">O</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/P/">P</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/Q/">Q</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/R/">R</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/S/">S</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/T/">T</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/U/">U</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/V/">V</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/W/">W</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/X/">X</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/Y/">Y</option>
+                <option value="preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet/Z/">Z</option>
+            </select>
+        </div>
+
+        <!-- END UPDATED PATRICK SECTION -->
 
         <a href="https://github.com/kingp84/speaktruth-pioneer/tree/main/preacher-files/Luke%20Lewis" 
            class="list-group-item list-group-item-action">
@@ -97,6 +129,14 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function openPatrickFolder(path) {
+    if (path) {
+        window.open(path, "_blank");
+    }
+}
+</script>
 
 </body>
 </html>
