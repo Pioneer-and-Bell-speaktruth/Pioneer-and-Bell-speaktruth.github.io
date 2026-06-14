@@ -98,7 +98,9 @@
 
     <select class="form-select" onchange="openLukeFolder(this.value)">
         <option value="">Select...</option>
-        <option value="https://github.com/kingp84/speaktruth-pioneer/blob/main/preacher-files/Luke%20Lewis/Sermons/Sermon-Authority2.html">Authority Part 2</option>
+        <option value="https://kingp84.github.io/speaktruth-pioneer/preacher-files/Luke%20Lewis/Sermons/Sermon-Authority2.html">
+            Authority Part 2
+        </option>
     </select>
 </div>
         
@@ -133,6 +135,14 @@
 function openPatrickFolder(path) {
     if (path) {
         window.open(path, "_blank");
+    }
+}
+</script>
+
+<script>
+function openLukeFolder(url) {
+    if (url) {
+        window.open(url, "_blank");
     }
 }
 </script>
