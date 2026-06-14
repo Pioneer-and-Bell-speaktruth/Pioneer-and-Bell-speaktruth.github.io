@@ -74,11 +74,36 @@
         </li>
     </ul>
 
-    <h3 class="text-secondary mt-4">Send Us a Message</h3>
-    <p class="fs-5">
-        You may also reach out through our YouTube channel (link is found on Sermon tab above) or by contacting us directly during services 
-        (See Homepage for times of service).
-    </p>
+<h3 class="text-secondary mt-4">Send Us a Message</h3>
+<p class="fs-5">
+    You may send us a message directly using the form below. Your message will be delivered to our congregation email.
+</p>
+
+<form action="https://formsubmit.co/pbeccofc@gmail.com" method="POST" class="bg-white p-4 rounded shadow-sm">
+
+    <!-- Protect from spam -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Redirect after submit -->
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+    <div class="mb-3">
+        <label class="form-label fw-bold">Your Name</label>
+        <input type="text" name="name" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label fw-bold">Your Email</label>
+        <input type="email" name="email" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label fw-bold">Message</label>
+        <textarea name="message" rows="5" class="form-control" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+</form>
 
 </div>
 
