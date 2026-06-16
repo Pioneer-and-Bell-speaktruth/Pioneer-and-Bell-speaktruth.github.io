@@ -70,6 +70,27 @@
            target="_blank">
             View Assignments Calendar
         </a>
+        <!-- Render Loading Warning Modal -->
+<div class="modal fade" id="renderWarningModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title fw-bold">Please Wait</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body fs-5">
+        Our login system is hosted on Render.com.  
+        <br><br>
+        If the server is asleep, it may take <strong>10–20 seconds</strong> to start up before the login page appears.  
+        <br><br>
+        This delay is normal — please wait and the page will load shortly.
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="continueToRender">Continue</button>
+      </div>
     </div>
 
     <!-- Worship Times -->
