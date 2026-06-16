@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pioneer & Bell church of Christ</title>
 
-    <!-- Lumen Theme -->
+    <!-- Bootswatch Lumen -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/lumen/bootstrap.min.css">
 
     <!-- Responsive Image Fix -->
@@ -22,47 +22,88 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Pioneer & Bell Church</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html">Pioneer & Bell</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
+        <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+        <li class="nav-item"><a class="nav-link" href="request.html">Request Books</a></li>
+      </ul>
+
+      <!-- Search box -->
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
     </div>
+  </div>
 </nav>
 
-<!-- HERO SECTION -->
-<div class="container mt-5">
-    <div class="text-center">
-        <img src="images/bible.jpg" class="hero-image img-fluid mb-4" alt="Bible Image">
+<!-- MAIN CONTENT -->
+<div class="container bg-light p-4 rounded shadow-sm">
 
-        <h1 class="fw-bold">Welcome to Pioneer & Bell Church</h1>
-        <p class="lead">A place of truth, community, and spiritual growth.</p>
+    <!-- HERO SECTION -->
+    <div class="text-center mb-4">
+        <img src="images/building.jpg" alt="Building" class="hero-image img-fluid rounded shadow-sm mb-4" style="max-width: 600px;">
+        <h1 class="fw-bold">Welcome to the Pioneer & Bell church of Christ</h1>
+        <p class="lead">
+            Thank you for visiting our website. We have many study articles here that we hope will help you 
+            in learning more about God's word. Click the Articles or Sermons button on the bar above to view 
+            published articles in the newspaper or sermon outlines. New sermons are added weekly, so come back and check them out.
+            <br><br>
+            We are currently revamping our Bible Study correspondence courses and tracts on several topics. 
+            We also have <em>Let the Bible Speak</em> Volumes 1–5 which contain our first 60 study ads. 
+            There is no charge for the books, shipping, or any study materials available on the website.
+            <br><br>
+            If you are in our area, please join us for worship and Bible study classes.
+        </p>
     </div>
 
-    <!-- BUTTONS -->
+    <!-- Assignments Calendar Button -->
     <div class="text-center mt-4">
-
-        <!-- Member Login -->
-        <a class="btn btn-success btn-lg m-2"
-           id="memberLoginBtn"
-           href="#">
-            Member Login
-        </a>
-
-        <!-- Admin Login -->
-        <a class="btn btn-danger btn-lg m-2"
-           id="adminLoginBtn"
-           href="#">
-            Admin Login
-        </a>
-
-        <!-- Assignments Calendar (UPDATED) -->
         <a class="btn btn-primary btn-lg m-2"
            id="assignmentsCalendarBtn"
            href="#">
             View Assignments Calendar
         </a>
-
     </div>
+
+    <!-- Worship Times -->
+    <h2 class="text-secondary text-center mt-5">Worship & Bible Study Times</h2>
+    <ul class="fs-5 list-unstyled text-center mt-3">
+        <li><strong>Sunday Morning Bible Study:</strong> 9:30 AM (Teacher: Earl Reed)</li>
+        <li class="mt-2"><strong>Sunday Morning Worship:</strong> 10:30 AM</li>
+        <li class="mt-2">
+            <strong>Sunday Evening Worship:</strong> 6:00 PM  
+            <br><em>(5th Sundays: approx. 1:00 PM, no 6 PM service)</em>
+        </li>
+        <li class="mt-2"><strong>Wednesday Evening Bible Study/Worship:</strong> 7:00 PM (Teacher: Earl Reed)</li>
+    </ul>
+
+    <!-- Login Buttons -->
+    <div class="text-center mt-4">
+        <a class="btn btn-success btn-lg m-2" id="memberLoginBtn" href="#">Member Login</a>
+        <a class="btn btn-danger btn-lg m-2" id="adminLoginBtn" href="#">Admin Login</a>
+    </div>
+
 </div>
+
+<!-- FOOTER -->
+<footer class="text-center py-4 mt-5 bg-secondary text-dark">
+    <a class="btn btn-light me-2" id="memberLoginBtnFooter" href="#">Member Login</a>
+    <a class="btn btn-light me-2" id="adminLoginBtnFooter" href="#">Admin Login</a>
+    <br><br>
+    &copy; 2026 Pioneer & Bell church of Christ
+</footer>
 
 <!-- RENDER WARNING MODAL -->
 <div class="modal fade" id="renderWarningModal" tabindex="-1" aria-hidden="true">
@@ -105,18 +146,20 @@ function showRenderWarning(url) {
 }
 
 // Member Login
-document.getElementById("memberLoginBtn").onclick = function (e) {
+document.getElementById("memberLoginBtn").onclick =
+document.getElementById("memberLoginBtnFooter").onclick = function (e) {
     e.preventDefault();
     showRenderWarning("https://speaktruth.onrender.com/login");
 };
 
 // Admin Login
-document.getElementById("adminLoginBtn").onclick = function (e) {
+document.getElementById("adminLoginBtn").onclick =
+document.getElementById("adminLoginBtnFooter").onclick = function (e) {
     e.preventDefault();
     showRenderWarning("https://speaktruth.onrender.com/admin");
 };
 
-// Assignments Calendar (UPDATED)
+// Assignments Calendar
 document.getElementById("assignmentsCalendarBtn").onclick = function (e) {
     e.preventDefault();
     showRenderWarning("https://speaktruth.onrender.com/assignments/calendar/2026/6/");
