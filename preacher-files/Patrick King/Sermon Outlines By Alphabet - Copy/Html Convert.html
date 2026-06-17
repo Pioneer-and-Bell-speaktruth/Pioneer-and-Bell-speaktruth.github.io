@@ -1,0 +1,48 @@
+
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+body { font-family: 'Times New Roman', serif; font-size: 18px; line-height: 1.5; margin: 40px; }
+h1 { text-align: center; margin-bottom: 30px; }
+h2 { margin-top: 30px; }
+ol, ul { margin-left: 30px; }
+</style>
+</head>
+<body>
+<p># Path to your Sermon Outlines By Alphabet folder</p>
+<p>$root = "C:\Users\patri\OneDrive\Documents\Sermon Outlines\Sermon Outlines By Alphabet"</p>
+<p># Load Word COM object</p>
+<p>$word = New-Object -ComObject Word.Application</p>
+<p>$word.Visible = $false</p>
+<p># Get all DOCX files in all subfolders (A–Z)</p>
+<p>$files = Get-ChildItem -Path $root -Recurse -Filter *.docx</p>
+<p>foreach ($file in $files) {</p>
+<p>try {</p>
+<p>Write-Host "Converting: $($file.FullName)"</p>
+<p># Open the Word document</p>
+<p>$doc = $word.Documents.Open($file.FullName)</p>
+<p># Build output HTML filename</p>
+<p>$htmlPath = [System.IO.Path]::ChangeExtension($file.FullName, ".html")</p>
+<p># Save as Filtered HTML (clean for websites)</p>
+<p>$doc.SaveAs([ref] $htmlPath, [ref] 10)  # 10 = wdFormatFilteredHTML</p>
+<p># Close the document</p>
+<p>$doc.Close()</p>
+<p>}</p>
+<p>catch {</p>
+<p>Write-Host "Error converting $($file.FullName): $_"</p>
+<p>}</p>
+<p>}</p>
+<p># Quit Word</p>
+<p>$word.Quit()</p>
+<p>Write-Host "Conversion complete!"</p>
+<p><a href="https://github.com/kingp84/speaktruth-pioneer/tree/main/preacher-files/Patrick%20King/Sermon%20Outlines%20By%20Alphabet%20(Web)" target="_blank"></p>
+<p>Patrick King</p>
+<p></a></p>
+<p>def save(self, *args, **kwargs):</p>
+<p># custom logic</p>
+<p>super().save(*args, **kwargs)</p>
+<hr>
+<p style='text-align:center;font-weight:bold;'>Author: Patrick King</p>
+</body>
+</html>
