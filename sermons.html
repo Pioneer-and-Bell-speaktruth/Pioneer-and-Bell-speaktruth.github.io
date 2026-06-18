@@ -66,12 +66,7 @@
     <!-- ACCORDION -->
     <div class="accordion" id="preacherAccordion">
     <div class="mb-3">
-<input 
-    type="text" 
-    id="Search Sermons" 
-    class="form-control mb-3" 
-    placeholder="Search sermons..."
->
+<input id="sermonSearch" class="form-control mb-3" placeholder="Search sermons...">
     <!-- SERMON LIST (Section 2) -->
 <div id="sermonList">
         <!-- EARL REED -->
@@ -442,16 +437,32 @@ function siteSearch(event) {
 }
 </script>
 <script>
-document.getElementById("Search sermons").addEventListener("keyup", function () {
+document.getElementById("sermonSearch").addEventListener("keyup", function () {
     let filter = this.value.toLowerCase();
-    let items = document.querySelectorAll("#pageList .page-item");
+
+    // Select all accordion items
+    let items = document.querySelectorAll(".accordion-item");
 
     items.forEach(item => {
-        let text = item.textContent.toLowerCase();
-        item.style.display = text.includes(filter) ? "" : "none";
+        let header = item.querySelector(".accordion-button");
+        let body = item.querySelector(".accordion-body");
+
+        let headerText = header ? header.textContent.toLowerCase() : "";
+        let bodyText = body ? body.textContent.toLowerCase() : "";
+
+        let match = headerText.includes(filter) || bodyText.includes(filter);
+
+        // Show or hide the entire accordion item
+        item.style.display = match ? "" : "none";
+
+        // Auto-open matching items
+        if (match && header && header.classList.contains("collapsed")) {
+            header.click();
+        }
     });
 });
 </script>
+
 </body>
 </html>
 
