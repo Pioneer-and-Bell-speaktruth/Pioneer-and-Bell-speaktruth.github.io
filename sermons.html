@@ -66,15 +66,13 @@
     <!-- ACCORDION -->
     <div class="accordion" id="preacherAccordion">
     <div class="mb-3">
-        <input type="text" id="sermonSearch" class="form-control" placeholder="Search all sermons...">
-    </div>
-        <input 
+<input 
     type="text" 
-    id="contentSearch" 
+    id="pageSearch" 
     class="form-control mb-3" 
     placeholder="Search sermons..."
 >
-        <!-- SERMON LIST (Section 2) -->
+    <!-- SERMON LIST (Section 2) -->
 <div id="sermonList">
         <!-- EARL REED -->
         <div class="accordion-item">
@@ -443,8 +441,17 @@ function siteSearch(event) {
     window.location.href = "search.html?q=" + encodeURIComponent(query);
 }
 </script>
+<script>
+document.getElementById("pageSearch").addEventListener("keyup", function () {
+    let filter = this.value.toLowerCase();
+    let items = document.querySelectorAll("#pageList .page-item");
 
+    items.forEach(item => {
+        let text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? "" : "none";
+    });
+});
+</script>
 </body>
 </html>
-</body>
-</html>
+
