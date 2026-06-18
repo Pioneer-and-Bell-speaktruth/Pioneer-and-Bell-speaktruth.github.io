@@ -188,5 +188,15 @@ href="https://statcounter.com/" target="_blank"><img class="statcounter"
 src="https://c.statcounter.com/13306820/0/a35cf22f/1/" alt="Web Analytics"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
+    <script>
+function siteSearch(event) {
+    event.preventDefault();
+    let query = document.getElementById("navbarSearch").value.toLowerCase();
+
+    // Redirect to search results page
+    window.location.href = "search.html?q=" + encodeURIComponent(query);
+}
+</script>
+
 </body>
 </html>
