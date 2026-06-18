@@ -62,7 +62,14 @@
     <div class="mb-3">
         <input type="text" id="sermonSearch" class="form-control" placeholder="Search all sermons...">
     </div>
-        
+        <input 
+    type="text" 
+    id="contentSearch" 
+    class="form-control mb-3" 
+    placeholder="Search sermons..."
+>
+        <!-- SERMON LIST (Section 2) -->
+<div id="sermonList">
         <!-- EARL REED -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="earlReedHeader">
@@ -421,5 +428,18 @@ href="https://statcounter.com/" target="_blank"><img class="statcounter"
 src="https://c.statcounter.com/13306820/0/a35cf22f/1/" alt="Web Analytics"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
+    <script>
+document.getElementById("contentSearch").addEventListener("keyup", function () {
+    let filter = this.value.toLowerCase();
+    let items = document.querySelectorAll("#sermonList .sermon-item");
+
+    items.forEach(item => {
+        let text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? "" : "none";
+    });
+});
+</script>
+</body>
+</html>
 </body>
 </html>
