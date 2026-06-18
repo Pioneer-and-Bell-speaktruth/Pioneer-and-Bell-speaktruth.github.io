@@ -68,7 +68,7 @@
     <div class="mb-3">
 <input 
     type="text" 
-    id="pageSearch" 
+    id="Search Sermons" 
     class="form-control mb-3" 
     placeholder="Search sermons..."
 >
@@ -442,7 +442,7 @@ function siteSearch(event) {
 }
 </script>
 <script>
-document.getElementById("pageSearch").addEventListener("keyup", function () {
+document.getElementById("Search sermons").addEventListener("keyup", function () {
     let filter = this.value.toLowerCase();
     let items = document.querySelectorAll("#pageList .page-item");
 
