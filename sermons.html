@@ -434,17 +434,16 @@ href="https://statcounter.com/" target="_blank"><img class="statcounter"
 src="https://c.statcounter.com/13306820/0/a35cf22f/1/" alt="Web Analytics"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
-    <script>
-document.getElementById("contentSearch").addEventListener("keyup", function () {
-    let filter = this.value.toLowerCase();
-    let items = document.querySelectorAll("#sermonList .sermon-item");
+<script>
+function siteSearch(event) {
+    event.preventDefault();
+    let query = document.getElementById("navbarSearch").value.toLowerCase();
 
-    items.forEach(item => {
-        let text = item.textContent.toLowerCase();
-        item.style.display = text.includes(filter) ? "" : "none";
-    });
-});
+    // Redirect to search results page
+    window.location.href = "search.html?q=" + encodeURIComponent(query);
+}
 </script>
+
 </body>
 </html>
 </body>
